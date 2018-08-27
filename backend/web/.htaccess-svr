@@ -1,0 +1,20 @@
+# htaccess - web
+# prevent directory listings
+Options -Indexes
+IndexIgnore */*
+ 
+# follow symbolic links
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(.+)?$ backend/web/$1
+
+# htaccess - local
+# prevent directory listings
+Options -Indexes
+IndexIgnore */*
+ 
+# follow symbolic links
+Options FollowSymlinks
+RewriteEngine on
+RewriteRule ^(.+)?$ backend/web/$1 
